@@ -1,24 +1,31 @@
 Summary:	DOC++ - A Documentation System for C, C++, IDL and Java
 Name:		doc++
 Version:	3.4.10
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 Group:		Publishing
 URL:		http://docpp.sourceforge.net
 Source0:	http://prdownloads.sourceforge.net/docpp/doc++-%{version}.tar.bz2
+Patch0:		gcc40_build_fix.patch
+Patch1:		gcc41_build_fix.patch
+Patch2:		segfault_fix.patch
+Patch3:		translation_ja.patch
 BuildRequires:	bison flex
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
-DOC++ is a documentation system for C, C++, IDL and Java,
-generating both TeX output for high quality hardcopies and HTML
-output for sophisticated online browsing of your documentation.
-The documentation is extracted directly from the C/C++/IDL
-header/source files or Java class files.
+DOC++ is a documentation system for C, C++, IDL and Java, generating both TeX
+output for high quality hardcopies and HTML output for sophisticated online
+browsing of your documentation. The documentation is extracted directly from
+the C/C++/IDL header/source files or Java class files.
 
 %prep
 
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 
