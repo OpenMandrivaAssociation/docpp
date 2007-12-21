@@ -11,6 +11,7 @@ Patch1:		gcc41_build_fix.patch
 Patch2:		segfault_fix.patch
 Patch3:		translation_ja.patch
 BuildRequires:	bison flex
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 DOC++ is a documentation system for C, C++, IDL and Java, generating both TeX
