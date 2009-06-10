@@ -1,8 +1,8 @@
 Summary:	DOC++ - A Documentation System for C, C++, IDL and Java
 Name:		doc++
 Version:	3.4.10
-Release:	%mkrel 6
-License:	GPL
+Release:	%mkrel 7
+License:	GPLv2+
 Group:		Publishing
 URL:		http://docpp.sourceforge.net
 Source0:	http://prdownloads.sourceforge.net/docpp/doc++-%{version}.tar.bz2
@@ -10,6 +10,7 @@ Patch0:		gcc40_build_fix.patch
 Patch1:		gcc41_build_fix.patch
 Patch2:		segfault_fix.patch
 Patch3:		translation_ja.patch
+Patch4:		%{name}-3.4.10-fix-gcc43.patch
 BuildRequires:	bison flex
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
@@ -26,6 +27,7 @@ the C/C++/IDL header/source files or Java class files.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1 -b .gcc43
 
 %build
 
