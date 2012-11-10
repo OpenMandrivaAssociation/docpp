@@ -1,0 +1,11 @@
+--- doc++-3.4.10.dist/src/html.cc	2005-05-08 16:43:19.000000000 +0200
++++ doc++-3.4.10/src/html.cc	2005-05-08 17:15:14.000000000 +0200
+@@ -1021,7 +1021,7 @@
+ 	}
+ }
+ 
+-struct {
++static struct {
+     int sec;
+     const char *name;
+ } toc_sections[] = {

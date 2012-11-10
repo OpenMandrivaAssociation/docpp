@@ -1,0 +1,546 @@
+--- doc++-3.4.10.orig/po/ja.po
++++ doc++-3.4.10/po/ja.po
+@@ -1,17 +1,19 @@
+ # SOME DESCRIPTIVE TITLE.
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
++# TANGE Toshio <t-tange@ats.nis.nec.co.jp>, 2000.
++# Junichi Uekawa <dancer@debian.org>, 2002, 2003.
++#
+ #
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: DOC++ 3.4.2\n"
+-"POT-Creation-Date: 2002-12-22 18:08+0200\n"
+-"PO-Revision-Date: 2000-03-14 22:21+EET\n"
+-"Last-Translator: TANGE Toshio <t-tange@ats.nis.nec.co.jp>\n"
++"POT-Creation-Date: 2003-06-05 00:50+0900\n"
++"PO-Revision-Date: 2003-06-05 00:51+0900\n"
++"Last-Translator: Junichi Uekawa <dancer@debian.org>\n"
+ "Language-Team: \n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=EUC-JP\n"
+-"Content-Transfer-Encoding: 8bit\n"
++"Content-Transfer-Encoding: 8-bit\n"
+ 
+ #: src/Entry.cc:102
+ msgid "No file"
+@@ -28,14 +30,14 @@
+ msgstr "警告: `%s %s%s' 既にドキュメントがあるのでマージします\n"
+ 
+ #: src/Entry.cc:1156
+-#, fuzzy, c-format
++#, c-format
+ msgid "Warning: no parent `%s' for `%s %s%s' found\n"
+-msgstr "クラス`%s'が見付かりません(クラス`%s %s%s'のためのクラス)\n"
++msgstr "警告:  `%2$s %3$s%4$s' の親である `%1$s' がみつかりません\n"
+ 
+ #: src/Entry.cc:1350
+-#, fuzzy, c-format
++#, c-format
+ msgid "`%s' found in namespace `%s'!\n"
+-msgstr "クラス `%s' が名前空間 `%s'で見つかりました!\n"
++msgstr "`%s' が名前空間 `%s'で見つかりました!\n"
+ 
+ #: src/McDirectory.cc:51
+ #, c-format
+@@ -69,10 +71,9 @@
+ msgstr "  -d  --dir DIR          出力先ディレクトリ DIR を指定する\n"
+ 
+ #: src/equate.cc:54
+-#, fuzzy
+ msgid "  -f  --file FILE        read FILE instead of gif.db as GIF database\n"
+ msgstr ""
+-"  -f  --file FILE       gif.db の代わりにデータベース FILE を読み込む \n"
++"  -f  --file FILE       gif.db の代わりにGIFデータベース FILE を読み込む \n"
+ 
+ #: src/equate.cc:55
+ msgid ""
+@@ -83,10 +84,9 @@
+ "\n"
+ 
+ #: src/equate.cc:56 src/main.cc:115
+-#, fuzzy
+ msgid ""
+ "Mail bug reports and suggestions to <docpp-users@lists.sourceforge.net>\n"
+-msgstr "バグ報告、助言は、メールで<docpp@yahoogroups.com>\n"
++msgstr "バグ報告、助言は、メールで<docpp-users@lists.sourceforge.net>\n"
+ 
+ #: src/equate.cc:61 src/main.cc:120
+ #, c-format
+@@ -94,42 +94,36 @@
+ msgstr "不正なオプション `%s': 引数の値が正しくない\n"
+ 
+ #: src/html.cc:102
+-#, fuzzy
+ msgid "   <TITLE>Table of Contents</TITLE>\n"
+-msgstr ""
+-"\n"
+-"<H1>目次</H1>\n"
++msgstr "   <TITLE>目次</TITLE>\n"
+ 
+ #: src/html.cc:111
+-#, fuzzy
+ msgid "   <TITLE>Hierarchy of Classes</TITLE>\n"
+-msgstr "<H1>クラス階層</H1>\n"
++msgstr "   <TITLE>クラス階層</TITLE>\n"
+ 
+ #: src/html.cc:119
+ msgid ""
+ "<HEAD>\n"
+ "   <TITLE>General Bits</TITLE>\n"
+ msgstr ""
++"<HEAD>\n"
++"   <TITLE>一般的な部分</TITLE>\n"
+ 
+ #: src/html.cc:137
+-#, fuzzy
+ msgid "\">Hierarchy of classes</A></I></P>"
+-msgstr "\">クラス階層</A></I><P>"
++msgstr "\">クラス階層</A></I></P>"
+ 
+ #: src/html.cc:142
+-#, fuzzy
+ msgid "\">Alphabetic index</A></I></P>"
+-msgstr "\">アルファベット順索引</A></I><P>"
++msgstr "\">アルファベット順索引</A></I></P>"
+ 
+ #: src/html.cc:146 src/html.cc:157
+-#, fuzzy
+ msgid "\">Alphabetic index</A></I>"
+-msgstr "\">アルファベット順索引</A></I><P>"
++msgstr "\">アルファベット順索引</A></I>"
+ 
+ #: src/html.cc:151
+-#, fuzzy
+ msgid "\">Hierarchy of classes</A></I>"
+-msgstr "\">クラス階層</A></I><P>"
++msgstr "\">クラス階層</A></I>"
+ 
+ #: src/html.cc:162
+ msgid "\">HTML hierarchy of classes</A>"
+@@ -145,18 +139,57 @@
+ msgstr "警告: weird file name `%s'\n"
+ 
+ #: src/html.cc:267
+-#, fuzzy
+ msgid ""
+ "This page was generated with the help of <A HREF=\"http://docpp.sourceforge."
+ "net\">DOC++</A>.\n"
+ msgstr ""
+-"このページは、<A HREF=\"http://www.linuxsupportline.com/~doc++\">DOC++</A>に"
+-"より生成されています\n"
++"このページは <A HREF=\"http://docpp.sourceforge.net\">DOC++</A> によって生成"
++"されています．\n"
+ 
+ #: src/html.cc:614
+ msgid "<H1>Hierarchy of Classes</H1>\n"
+ msgstr "<H1>クラス階層</H1>\n"
+ 
++#: src/html.cc:1028
++msgid "General stuff"
++msgstr "一般"
++
++#: src/html.cc:1029
++msgid "Packages"
++msgstr "パッケージ"
++
++#: src/html.cc:1030
++msgid "Namespaces"
++msgstr "ネームスペース"
++
++#: src/html.cc:1031
++msgid "Classes"
++msgstr "クラス"
++
++#: src/html.cc:1032
++msgid "Interfaces"
++msgstr "インタフェース"
++
++#: src/html.cc:1033
++msgid "Functions"
++msgstr "関数"
++
++#: src/html.cc:1034
++msgid "Variables"
++msgstr "変数"
++
++#: src/html.cc:1035
++msgid "Macros"
++msgstr "マクロ"
++
++#: src/html.cc:1036
++msgid "Enums, Unions, Structs"
++msgstr "エニュメレーション，ユニオン，構造体"
++
++#: src/html.cc:1037
++msgid "Typedefs"
++msgstr "typedef"
++
+ #: src/html.cc:1072
+ msgid ""
+ "\n"
+@@ -229,25 +262,24 @@
+ msgstr "<DT><B>パラメータ:</B><DD>"
+ 
+ #: src/html.cc:1318
+-#, fuzzy
+ msgid "<DT><B>Fields:</B><DD>"
+-msgstr "<DT><B> 参照 :</B><DD>"
++msgstr "<DT><B> フィールド:</B><DD>"
+ 
+ #: src/html.cc:1335
+ msgid "Returns"
+-msgstr ""
++msgstr "返り値"
+ 
+ #: src/html.cc:1336
+ msgid "Preconditions"
+-msgstr ""
++msgstr "事前条件"
+ 
+ #: src/html.cc:1337
+ msgid "Postconditions"
+-msgstr ""
++msgstr "事後条件"
+ 
+ #: src/html.cc:1338
+ msgid "Friends"
+-msgstr ""
++msgstr "Friends"
+ 
+ #: src/html.cc:1341
+ #, c-format
+@@ -260,14 +292,14 @@
+ msgstr "<DT><B>バージョン:</B><DD>%s\n"
+ 
+ #: src/html.cc:1347
+-#, fuzzy, c-format
++#, c-format
+ msgid "<DT><B><I>Deprecated:</I></B><DD>%s\n"
+-msgstr "<DT><B>バージョン:</B><DD>%s\n"
++msgstr "<DT><B><I>古い用法:</I></B><DD>%s\n"
+ 
+ #: src/html.cc:1350
+-#, fuzzy, c-format
++#, c-format
+ msgid "<DT><B>Since:</B><DD>%s\n"
+-msgstr "<DT><B>バージョン:</B><DD>%s\n"
++msgstr "<DT><B>この機能がついたバージョン:</B><DD>%s\n"
+ 
+ #: src/html.cc:1354
+ msgid "<DT><B>See Also:</B><DD>"
+@@ -346,9 +378,9 @@
+ msgstr "`%s %s%s' を `%s'へコピーしました \n"
+ 
+ #: src/html.cc:1802
+-#, fuzzy, c-format
++#, c-format
+ msgid "Warning: `%s %s%s' hanging from root with no page\n"
+-msgstr "`%s' ページを出力することができませんでした\n"
++msgstr "警告: `%s %s%s' がルートからぶら下がっていますがページが無いです\n"
+ 
+ #: src/html.cc:1888
+ #, c-format
+@@ -361,9 +393,9 @@
+ msgstr "`%s %s%s'のためにファイル`%s'へ書いています\n"
+ 
+ #: src/html.cc:1957
+-#, fuzzy, c-format
++#, c-format
+ msgid "Warning: weird filename `%s' for `%s %s%s'\n"
+-msgstr "Warning: weird filename `%s' for `%s %s'\n"
++msgstr "警告: 変なファイル名 `%s'， `%s %s%s'のものです\n"
+ 
+ #: src/html.cc:1965
+ #, c-format
+@@ -371,9 +403,9 @@
+ msgstr "`%s' を書き込むために開けませんでした\n"
+ 
+ #: src/html.cc:2088
+-#, fuzzy, c-format
++#, c-format
+ msgid "`%s' directory already exists\n"
+-msgstr "`%s' は既に存在します\n"
++msgstr "`%s' ディレクトリは既に存在します\n"
+ 
+ #: src/html.cc:2093
+ #, c-format
+@@ -407,9 +439,9 @@
+ msgstr "クラス階層を書いています...\n"
+ 
+ #: src/main.cc:50
+-#, fuzzy, c-format
++#, c-format
+ msgid "DOC++ %s, a documentation system for C, C++, IDL and Java\n"
+-msgstr "DOC++ %s はC, C++ そしてJavaの文書作成システムです\n"
++msgstr "DOC++ %s はC, C++，IDL そしてJavaの文書作成システムです\n"
+ 
+ #: src/main.cc:52
+ msgid ""
+@@ -424,25 +456,21 @@
+ msgstr "  -A  --all              全ての項目を含む文書を作成します\n"
+ 
+ #: src/main.cc:56
+-#, fuzzy
+ msgid "  -c  --c-comments       use C/C++ comments as doc++-comments\n"
+ msgstr ""
+-"  -c  --c-comments       C++ のコメント`//'をdoc++のコメントとして扱います\n"
++"  -c  --c-comments       C/C++ のコメントをdoc++のコメントとして扱います\n"
+ 
+ #: src/main.cc:57
+-#, fuzzy
+ msgid "  -C  --config FILE      read options from FILE\n"
+-msgstr ""
+-"  -I  --input FILE       ファイルFILEから入力ファイル名リストを読み込みます\n"
++msgstr "  -I  --input FILE       ファイルFILEからオプションを読み込みます\n"
+ 
+ #: src/main.cc:58
+ msgid "  -h  --help             display this help and exit\n"
+ msgstr "  -h  --help             このメッセージを表示して終了します\n"
+ 
+ #: src/main.cc:59
+-#, fuzzy
+ msgid "  -H  --html             parse HTML syntax instead of TeX\n"
+-msgstr "  -H  --html            HTML の書式を解析します\n"
++msgstr "  -H  --html            TeX ではなく HTML の書式を解析します\n"
+ 
+ #: src/main.cc:60
+ msgid "  -I  --input FILE       read a list of input files from FILE\n"
+@@ -466,9 +494,8 @@
+ msgstr "  -p  --private          privateメンバを文書に含みます\n"
+ 
+ #: src/main.cc:65
+-#, fuzzy
+ msgid "  -q  --quick            optimize for speed instead of size\n"
+-msgstr "  -q  --quick            速さを優先します\n"
++msgstr "  -q  --quick            大きさより速さを優先します\n"
+ 
+ #: src/main.cc:66
+ msgid ""
+@@ -477,7 +504,7 @@
+ 
+ #: src/main.cc:67
+ msgid "  -R  --internal-doc     generate internal documentation\n"
+-msgstr ""
++msgstr "  -R  --internal-doc     内部ドキュメントを作成する\n"
+ 
+ #: src/main.cc:68
+ msgid "  -u  --upwards-arrows   upwards arrows in class graphs\n"
+@@ -488,46 +515,42 @@
+ msgstr "  -v  --verbose          詳細表示モードをオンにします\n"
+ 
+ #: src/main.cc:70
+-#, fuzzy
+ msgid "  -V  --version          output version information and exit\n"
+-msgstr ""
+-"  -V  --version          バージョン情報を表示して終了\n"
+-"\n"
++msgstr "  -V  --version          バージョン情報を出力して終了\n"
+ 
+ #: src/main.cc:71
+ msgid "  -y  --scan-includes    scan `#include'ed header files\n"
+-msgstr ""
++msgstr "  -y  --scan-includes    #include されたヘッダファイルもスキャンする\n"
+ 
+ #: src/main.cc:72
+-#, fuzzy
+ msgid "  -Y  --idl              parse IDL instead of C/C++\n"
+-msgstr "  -J  --java             JavaをC/C++と同じように読みます\n"
++msgstr "  -Y  --idl              IDLをC/C++のかわりに読みます\n"
+ 
+ #: src/main.cc:73
+-#, fuzzy
+ msgid ""
+ "  -z  --php              parse PHP instead of C/C++\n"
+ "\n"
+-msgstr "  -J  --java             JavaをC/C++と同じように読みます\n"
++msgstr "  -z  --php              PHPをC/C++のかわりに処理します\n"
+ 
+ #: src/main.cc:75
+ msgid "Alternate output types instead of HTML:\n"
+-msgstr ""
++msgstr "HTML以外の出力タイプ:\n"
+ 
+ #: src/main.cc:76
+-#, fuzzy
+ msgid "  -t  --tex              TeX output output\n"
+-msgstr "  -t  --tex              HTMLと同様にTEX出力を行います\n"
++msgstr "  -t  --tex              TEX出力を行います\n"
+ 
+ #: src/main.cc:77
+-#, fuzzy
+ msgid "  -Z  --docbook          DocBook SGML output\n"
+-msgstr "  -t  --tex              HTMLと同様にTEX出力を行います\n"
++msgstr ""
++"  -Z  --docbook          DocBook SGMLを出力します\n"
++"\n"
+ 
+ #: src/main.cc:78
+-#, fuzzy
+ msgid "  -L  --docbookxml       DocBook XML output\n"
+-msgstr "  -t  --tex              HTMLと同様にTEX出力を行います\n"
++msgstr ""
++"  -L  --docbookxml       DocBook XMLを生成します\n"
++"\n"
+ 
+ #: src/main.cc:80
+ msgid "Additional options for HTML output:\n"
+@@ -574,9 +597,8 @@
+ msgstr "  -k  --trivial-graphs   クラスグラフの詳細を保存する\n"
+ 
+ #: src/main.cc:92
+-#, fuzzy
+ msgid "  -K  --stylesheet FILE  use FILE as HTML style sheet\n"
+-msgstr "  -T  --header FILE     HTML ページのヘッダFILEを使う\n"
++msgstr "  -K  --stylesheet FILE  FILEをHTMLスタイルシートとして使う\n"
+ 
+ #: src/main.cc:93
+ msgid "  -m  --no-members       don't show all members in DOC section\n"
+@@ -600,11 +622,11 @@
+ 
+ #: src/main.cc:98
+ msgid "  -w  --before-group     print group documentation before group\n"
+-msgstr ""
++msgstr "  -w  --before-group     グループドキュメントをグループの前に置く\n"
+ 
+ #: src/main.cc:99
+ msgid "  -W  --before-class     print class documentation before group\n"
+-msgstr ""
++msgstr "  -W  --before-class     クラス文書をグループの前に置く\n"
+ 
+ #: src/main.cc:100
+ msgid ""
+@@ -627,9 +649,8 @@
+ msgstr "  -ef --env FILE          TeX 環境をFILEから読み込む\n"
+ 
+ #: src/main.cc:105
+-#, fuzzy
+ msgid "  -ei --index            generate the index only\n"
+-msgstr "  -ei --index            索引を作る\n"
++msgstr "  -ei --index            索引のみを作る\n"
+ 
+ #: src/main.cc:106
+ msgid "  -eo --style OPTION     setup TeX style OPTION\n"
+@@ -656,18 +677,16 @@
+ msgstr "  -o  --output FILE      出力ファイル名の指定\n"
+ 
+ #: src/main.cc:112
+-#, fuzzy
+ msgid "  -s  --source           generate source code listing\n"
+-msgstr ""
+-"  -s  --source           ソースリストの出力\n"
+-"\n"
++msgstr "  -s  --source           ソースリストの出力\n"
+ 
+ #: src/main.cc:113
+-#, fuzzy
+ msgid ""
+ "  -X  --hide-index       don't generate index at section start\n"
+ "\n"
+-msgstr "  -ei --index            索引を作る\n"
++msgstr ""
++"  -X  --hide-index       セクションの最初にインデックスを生成しない\n"
++"\n"
+ 
+ #: src/main.cc:125
+ #, c-format
+@@ -676,14 +695,14 @@
+ "オプション `-e%c'は不明なものです。 引数に与えているものが正しくありません\n"
+ 
+ #: src/main.cc:131
+-#, fuzzy, c-format
++#, c-format
+ msgid "Unknown option `-%c'. Try `doc++ --help'\n"
+-msgstr "オプション `-%c'は不明なものです。 `%s -h'を試してください\n"
++msgstr "オプション `-%c'は不明なものです。 `doc++ --help'を試してください\n"
+ 
+ #: src/main.cc:133
+-#, fuzzy, c-format
++#, c-format
+ msgid "Unknown option `-%c%c'. Try `doc++ --help'\n"
+-msgstr "オプション `-%c'は不明なものです。 `%s -h'を試してください\n"
++msgstr "オプション `-%c%c'は不明なものです。 `doc++ --help'を試してください\n"
+ 
+ #: src/main.cc:449
+ msgid "Ignoring option `--depth': bad argument specified\n"
+@@ -695,14 +714,13 @@
+ msgstr "不正なオプションの値です `--output': ファイル `%s'を開けませんでした\n"
+ 
+ #: src/main.cc:537
+-#, fuzzy, c-format
++#, c-format
+ msgid "Error opening configuration file `%s'\n"
+-msgstr "ファイルリストを開こうとしたら `%s'エラーになりました\n"
++msgstr "設定ファイル `%s' をひらこうとしたらエラーがおきました\n"
+ 
+ #: src/main.cc:558
+-#, fuzzy
+ msgid "No input files. Try `doc++ --help'\n"
+-msgstr "入力ファイルがありません。`%s -h'を試してください\n"
++msgstr "入力ファイルがありません。`doc++ --help'を試してください\n"
+ 
+ #: src/main.cc:579
+ msgid "Reading files...\n"
+@@ -731,9 +749,8 @@
+ msgstr "構文解析しています...\n"
+ 
+ #: src/main.cc:636
+-#, fuzzy
+ msgid "Merging duplicate entries...\n"
+-msgstr "エントリを並べています...\n"
++msgstr "重複エントリを統合しています...\n"
+ 
+ #: src/main.cc:641
+ msgid "Sorting entries...\n"
+--- doc++-3.4.10.orig/src/doc.h
++++ doc++-3.4.10/src/doc.h
+@@ -36,8 +36,10 @@
+ #include <gettext.h>
+ #ifdef ENABLE_NLS
+ #define _(x) gettext(x)
++#define N_(x) (x)
+ #else
+ #define _(x) (x)
++#define N_(x) (x)
+ #endif
+ 
+ #define DOCXX_VERSION	"3.4.10"
+--- doc++-3.4.10.orig/src/html.cc
++++ doc++-3.4.10/src/html.cc
+@@ -1025,16 +1025,16 @@
+     int sec;
+     const char *name;
+ } toc_sections[] = {
+-    { MANUAL_SEC,	"General stuff" },
+-    { PACKAGE_SEC,	"Packages" },
+-    { NAMESPACE_SEC,	"Namespaces" },
+-    { CLASS_SEC,	"Classes" },
+-    { INTERFACE_SEC,	"Interfaces" },
+-    { FUNCTION_SEC,	"Functions" },
+-    { VARIABLE_SEC,	"Variables" },
+-    { MACRO_SEC,	"Macros" },
+-    { UNION_SEC,	"Enums, Unions, Structs" },
+-    { TYPEDEF_SEC,	"Typedefs" },
++    { MANUAL_SEC,	N_("General stuff") },
++    { PACKAGE_SEC,	N_("Packages") },
++    { NAMESPACE_SEC,	N_("Namespaces") },
++    { CLASS_SEC,	N_("Classes") },
++    { INTERFACE_SEC,	N_("Interfaces") },
++    { FUNCTION_SEC,	N_("Functions") },
++    { VARIABLE_SEC,	N_("Variables") },
++    { MACRO_SEC,	N_("Macros") },
++    { UNION_SEC,	N_("Enums, Unions, Structs") },
++    { TYPEDEF_SEC,	N_("Typedefs") },
+     { 0, 0 }
+ };
+ 
+@@ -1079,7 +1079,7 @@
+ 	if(list.size() > 0)
+ 	    {
+ 	    list.sort();
+-	    fprintf(f, "<H2>%s</H2>\n", toc_sections[k].name);
++	    fprintf(f, "<H2>%s</H2>\n", gettext(toc_sections[k].name));
+ 	    fprintf(f, "<UL>\n");
+ 	    list.write(f);
+ 	    fprintf(f, "</UL>\n");

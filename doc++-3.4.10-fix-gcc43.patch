@@ -1,0 +1,238 @@
+diff -p -up doc++-3.4.10/src/comment.ll.gcc43 doc++-3.4.10/src/comment.ll
+--- doc++-3.4.10/src/comment.ll.gcc43	2009-06-10 02:31:39.000000000 +0200
++++ doc++-3.4.10/src/comment.ll	2009-06-10 02:31:57.000000000 +0200
+@@ -24,7 +24,7 @@
+ 
+ #include <assert.h>
+ #include <ctype.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdarg.h>
+ #include <stdio.h>
+ 
+diff -p -up doc++-3.4.10/src/cpp.ll.gcc43 doc++-3.4.10/src/cpp.ll
+--- doc++-3.4.10/src/cpp.ll.gcc43	2009-06-10 02:33:55.000000000 +0200
++++ doc++-3.4.10/src/cpp.ll	2009-06-10 02:34:18.000000000 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include <assert.h>
+ #include <ctype.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdarg.h>
+ #include <stdio.h>
+ 
+diff -p -up doc++-3.4.10/src/datahashtable.h.gcc43 doc++-3.4.10/src/datahashtable.h
+--- doc++-3.4.10/src/datahashtable.h.gcc43	2009-06-10 02:36:15.000000000 +0200
++++ doc++-3.4.10/src/datahashtable.h	2009-06-10 02:38:28.000000000 +0200
+@@ -26,11 +26,13 @@
+ #define _DATAHASHTABLE_H
+ 
+ #include <assert.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdlib.h>
+ 
+ #include "McDArray.h"
+ 
++using namespace std;
++
+ /* This should be a private subclass of #DataHashTable#. However, since cfront
+    is not able to compile this constrution, we had move the class to global
+    scope.
+diff -p -up doc++-3.4.10/src/doc.ll.gcc43 doc++-3.4.10/src/doc.ll
+--- doc++-3.4.10/src/doc.ll.gcc43	2009-06-10 02:34:49.000000000 +0200
++++ doc++-3.4.10/src/doc.ll	2009-06-10 02:35:15.000000000 +0200
+@@ -23,8 +23,8 @@
+ 
+ %{
+ #include <assert.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff -p -up doc++-3.4.10/src/doc2dbsgml.ll.gcc43 doc++-3.4.10/src/doc2dbsgml.ll
+--- doc++-3.4.10/src/doc2dbsgml.ll.gcc43	2009-06-10 02:40:34.000000000 +0200
++++ doc++-3.4.10/src/doc2dbsgml.ll	2009-06-10 02:41:49.000000000 +0200
+@@ -22,12 +22,14 @@
+ 
+ %{
+ #include <assert.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
++using namespace std;
++
+ #include "classgraph.h"
+ #include "doc.h"
+ 
+diff -p -up doc++-3.4.10/src/doc2dbxml.ll.gcc43 doc++-3.4.10/src/doc2dbxml.ll
+--- doc++-3.4.10/src/doc2dbxml.ll.gcc43	2009-06-10 02:43:37.000000000 +0200
++++ doc++-3.4.10/src/doc2dbxml.ll	2009-06-10 02:46:39.000000000 +0200
+@@ -25,12 +25,14 @@
+ 
+ %{
+ #include <assert.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
++using namespace std;
++
+ #include "classgraph.h"
+ #include "doc.h"
+ 
+diff -p -up doc++-3.4.10/src/doc2tex.ll.gcc43 doc++-3.4.10/src/doc2tex.ll
+--- doc++-3.4.10/src/doc2tex.ll.gcc43	2009-06-10 02:28:07.000000000 +0200
++++ doc++-3.4.10/src/doc2tex.ll	2009-06-10 02:29:30.000000000 +0200
+@@ -23,13 +23,15 @@
+ 
+ %{
+ #include <assert.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <time.h>
+ 
++using namespace std;
++
+ #include "classgraph.h"
+ #include "doc.h"
+ 
+diff -p -up doc++-3.4.10/src/equate.cc.gcc43 doc++-3.4.10/src/equate.cc
+--- doc++-3.4.10/src/equate.cc.gcc43	2009-06-10 02:38:48.000000000 +0200
++++ doc++-3.4.10/src/equate.cc	2009-06-10 02:39:43.000000000 +0200
+@@ -23,9 +23,9 @@
+ 
+ #include "config.h"
+ 
+-#include <fstream.h>
++#include <fstream>
+ #include <getopt.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdio.h>
+ #include <string.h>
+ 
+diff -p -up doc++-3.4.10/src/html.cc.gcc43 doc++-3.4.10/src/html.cc
+--- doc++-3.4.10/src/html.cc.gcc43	2009-06-10 02:30:44.000000000 +0200
++++ doc++-3.4.10/src/html.cc	2009-06-10 02:31:17.000000000 +0200
+@@ -31,7 +31,7 @@
+ #include <direct.h>
+ #endif
+ #include <errno.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff -p -up doc++-3.4.10/src/java.ll.gcc43 doc++-3.4.10/src/java.ll
+--- doc++-3.4.10/src/java.ll.gcc43	2009-06-10 02:29:58.000000000 +0200
++++ doc++-3.4.10/src/java.ll	2009-06-10 02:30:25.000000000 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include <assert.h>
+ #include <ctype.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdio.h>
+ 
+ #include "doc.h"
+diff -p -up doc++-3.4.10/src/main.cc.gcc43 doc++-3.4.10/src/main.cc
+--- doc++-3.4.10/src/main.cc.gcc43	2009-06-10 02:25:17.000000000 +0200
++++ doc++-3.4.10/src/main.cc	2009-06-10 02:27:28.000000000 +0200
+@@ -25,7 +25,7 @@
+ #include "config.h"
+ 
+ #include <assert.h>
+-#include <fstream.h>
++#include <fstream>
+ #include <getopt.h>
+ #include <locale.h>
+ #include <stdio.h>
+@@ -38,6 +38,8 @@
+ 
+ #define	GIF_FILE_NAME	"gifs.db"
+ 
++using namespace std;
++
+ FILE *out;
+ char language;
+ Entry *root;
+diff -p -up doc++-3.4.10/src/nametable.cc.gcc43 doc++-3.4.10/src/nametable.cc
+--- doc++-3.4.10/src/nametable.cc.gcc43	2000-04-08 23:11:54.000000000 +0200
++++ doc++-3.4.10/src/nametable.cc	2009-06-10 02:22:39.000000000 +0200
+@@ -22,7 +22,7 @@
+ */
+ 
+ #include <assert.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdlib.h>
+ #include <string.h>
+ 
+diff -p -up doc++-3.4.10/src/nametable.h.gcc43 doc++-3.4.10/src/nametable.h
+--- doc++-3.4.10/src/nametable.h.gcc43	2000-04-08 23:11:56.000000000 +0200
++++ doc++-3.4.10/src/nametable.h	2009-06-10 02:24:49.000000000 +0200
+@@ -25,7 +25,9 @@
+ #define	_NAME_TABLE_H
+ 
+ #include <assert.h>
+-#include <iostream.h>
++#include <iostream>
++
++using namespace std;
+ 
+ #include "datahashtable.h"
+ 
+diff -p -up doc++-3.4.10/src/php.ll.gcc43 doc++-3.4.10/src/php.ll
+--- doc++-3.4.10/src/php.ll.gcc43	2009-06-10 02:47:02.000000000 +0200
++++ doc++-3.4.10/src/php.ll	2009-06-10 02:47:26.000000000 +0200
+@@ -23,7 +23,7 @@
+ %{
+ #include <assert.h>
+ #include <ctype.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <stdio.h>
+ 
+ #include "doc.h"
+diff -p -up doc++-3.4.10/src/tex2gif.cc.gcc43 doc++-3.4.10/src/tex2gif.cc
+--- doc++-3.4.10/src/tex2gif.cc.gcc43	2009-06-10 02:32:20.000000000 +0200
++++ doc++-3.4.10/src/tex2gif.cc	2009-06-10 02:33:25.000000000 +0200
+@@ -21,8 +21,8 @@
+   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
+-#include <iostream.h>
+-#include <fstream.h>
++#include <iostream>
++#include <fstream>
+ #include <stdio.h>
+ #include <string.h>
+ 
+@@ -38,6 +38,8 @@
+ #include "nametable.h"
+ #include "tex2gif.h"
+ 
++using namespace std;
++
+ void _system(const char *b)
+ {
+ #ifdef DEBUG
