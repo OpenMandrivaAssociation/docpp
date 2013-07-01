@@ -1,4 +1,4 @@
-Summary:	DOC++ - A Documentation System for C, C++, IDL and Java
+Summary:++++ - A Documentation System for C, C++, IDL and Java
 Name:		doc++
 Version:	3.4.10
 Release:	%mkrel 8
