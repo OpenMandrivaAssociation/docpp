@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	A Documentation System for C, C++, IDL and Java
 Name:		doc++
 Version:	3.4.10
