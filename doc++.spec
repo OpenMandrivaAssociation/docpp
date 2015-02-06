@@ -3,7 +3,7 @@
 Summary:	A Documentation System for C, C++, IDL and Java
 Name:		doc++
 Version:	3.4.10
-Release:	9
+Release:	10
 License:	GPLv2+
 Group:		Publishing
 URL:		http://docpp.sourceforge.net
