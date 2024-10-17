@@ -6,7 +6,7 @@ Version:	3.4.10
 Release:	10
 License:	GPLv2+
 Group:		Publishing
-URL:		http://docpp.sourceforge.net
+URL:		https://docpp.sourceforge.net
 Source0:	http://prdownloads.sourceforge.net/docpp/doc++-%{version}.tar.bz2
 Patch0:		gcc40_build_fix.patch
 Patch1:		gcc41_build_fix.patch
